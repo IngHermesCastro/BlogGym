@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogDeGym</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="descripcion" content="Pagina web de entrenamientos" >
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!--Prefetch-->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!--Preload-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header class="header">
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="index.html">
-                    <h1 class="logo__nombre">Blog <span class="logo__bold">DeGym</span></h1>
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">DeGym</span></h1>
                 </a>
                 <nav class="navegacion">
-                    <a href="nosotros.html" class="navegacion__navegacion">Nosotros</a>
-                    <a href="cursos.html" class="navegacion__navegacion">Cursos</a>
-                    <a href="contacto.html" class="navegacion__navegacion">Contacto</a>
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
                 </nav>
             </div>
         </div>
@@ -30,6 +41,91 @@
         </div>
 
     </header>
-    
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img src="/img/blog1.jpg" alt="imagen blog1" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Definicion</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius repellendus dicta asperiores non doloremque rem ipsam quaerat at adipisci numquam repudiandae! Reprehenderit dolores pariatur error? Dicta exercitationem nostrum quaerat!</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer entrada</a>
+                </div>
+            </article>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp">
+                        <img src="/img/blog2.jpg" alt="imagen blog2" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Aumento de Masa Muscular</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius repellendus dicta asperiores non doloremque rem ipsam quaerat at adipisci numquam repudiandae! Reprehenderit dolores pariatur error? Dicta exercitationem nostrum quaerat!</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer entrada</a>
+                </div>
+            </article>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp">
+                        <img src="/img/blog3.jpg" alt="imagen blog3" loading="lazy">
+                    </picture>
+                </div>
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Cardio HIT</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eius repellendus dicta asperiores non doloremque rem ipsam quaerat at adipisci numquam repudiandae! Reprehenderit dolores pariatur error? Dicta exercitationem nostrum quaerat!</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer entrada</a>
+                </div>
+            </article>
+        </main>
+        <aside class="sidebar">
+            <h3>Cursos y Talleres</h3>
+            <uL class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin">Técnicas en los ejercicios</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span> 
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">15</span> 
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    
+                </li>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Rutinas para Principiantes</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span> 
+                    </p>
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">30</span> 
+                    </p>
+                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
+                    
+                </li>
+            </uL>
+        </aside>
+    </div>
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">DeGym</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
